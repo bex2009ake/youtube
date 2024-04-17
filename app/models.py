@@ -6,9 +6,6 @@ class User(AbstractUser):
     bio = models.TextField()
     img = models.ImageField(upload_to='user/')
 
-    def set_password(self, raw_password: str | None) -> None:
-        self.password = self.password
-
 
     def __str__(self) -> str:
         return self.username
